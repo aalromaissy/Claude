@@ -54,6 +54,8 @@ struct HomeView: View {
                                 ForEach(outfitViewModel.suggestions) { suggestion in
                                     OutfitCard(suggestion: suggestion)
                                         .padding(.horizontal)
+                                        .accessibilityAddTraits(.isButton)
+                                        .accessibilityHint("Double tap to view outfit details")
                                         .onTapGesture {
                                             selectedSuggestion = suggestion
                                             showingDetail = true
@@ -76,6 +78,7 @@ struct HomeView: View {
                         Image(systemName: "arrow.clockwise")
                     }
                     .disabled(outfitViewModel.isLoading)
+                    .accessibilityLabel("Refresh suggestions")
                 }
             }
             .sheet(item: $selectedSuggestion) { suggestion in

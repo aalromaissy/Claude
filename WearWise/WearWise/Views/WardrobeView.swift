@@ -223,6 +223,7 @@ struct WardrobeItemCard: View {
                         .background(Color.black.opacity(0.3))
                         .clipShape(Circle())
                 }
+                .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Add to favorites")
                 .padding(8)
             }
 
@@ -243,6 +244,9 @@ struct WardrobeItemCard: View {
                 .foregroundColor(.secondary)
             }
         }
+        .accessibilityElement(children: .contain)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityHint("Double tap to view item details")
         .onTapGesture(perform: onTap)
     }
 }
@@ -344,6 +348,7 @@ struct ClothingItemDetailView: View {
                     } label: {
                         Image(systemName: "trash")
                     }
+                    .accessibilityLabel("Delete item")
                 }
             }
             .alert("Delete Item", isPresented: $showingDeleteAlert) {
