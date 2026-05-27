@@ -1,0 +1,3 @@
+## 2026-05-27 - Adding Accessibility Labels to SwiftUI Icon Buttons
+**Learning:** Icon-only buttons in SwiftUI (using `Image(systemName: ...)`) do not have inherent meaning to screen readers, unlike text labels. It is critical to add `.accessibilityLabel(...)` to these buttons to ensure users relying on VoiceOver understand their function.
+**Action:** Always add `.accessibilityLabel` to any SwiftUI `Button` where the label consists solely of an icon (e.g., `plus`, `trash`, `heart`, `arrow.clockwise`). Ensure the label accurately describes the action the button performs, including dynamic states (like adding vs. removing from favorites).
