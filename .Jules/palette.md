@@ -1,0 +1,3 @@
+## 2024-05-14 - Missing Accessibility Labels on Icon-Only Buttons
+**Learning:** A common pattern across the application's components (e.g., `WardrobeView.swift`, `HomeView.swift`) is the use of `Button` elements where the label consists purely of an `Image(systemName: ...)`, without an `.accessibilityLabel`. VoiceOver relies on this text to announce the button's purpose. Without it, users hear just "button", making it impossible to know the action without visual context.
+**Action:** Always ensure that an `.accessibilityLabel("Description")` modifier is added to any `Button` whose visual label is just an icon, as required for proper screen reader support and adhering to memory guidelines.
