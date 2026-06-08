@@ -1,0 +1,1 @@
+## 2024-05-15 - Missing VoiceOver Support on Key Actions\n**Learning:** By default, SwiftUI buttons constructed solely with a systemImage provide no or poor VoiceOver descriptions (e.g. "arrow.clockwise"), severely impacting navigation for screen reader users.\n**Action:** Always append `.accessibilityLabel` to icon-only buttons in SwiftUI to explicitly declare their intent.
