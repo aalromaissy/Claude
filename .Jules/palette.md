@@ -1,0 +1,3 @@
+## 2026-06-11 - Native SwiftUI Accessibility Mapping
+**Learning:** The prompt instructions are heavily web-focused (ARIA labels, classNames, pnpm). When working on a native SwiftUI app like WearWise, UX principles translate directly but the implementation differs. Web ARIA labels map to SwiftUI `.accessibilityLabel(...)`. Icon-only SwiftUI `Button` views must have this modifier for VoiceOver to announce them correctly.
+**Action:** When acting as Palette in a non-web repository, translate the core UX/accessibility intent (e.g., screen reader labels) into the native framework's equivalent syntax instead of trying to apply HTML/CSS/JS patterns.
