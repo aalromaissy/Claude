@@ -223,6 +223,7 @@ struct WardrobeItemCard: View {
                         .background(Color.black.opacity(0.3))
                         .clipShape(Circle())
                 }
+                .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Add to favorites")
                 .padding(8)
             }
 
@@ -344,6 +345,7 @@ struct ClothingItemDetailView: View {
                     } label: {
                         Image(systemName: "trash")
                     }
+                    .accessibilityLabel("Delete")
                 }
             }
             .alert("Delete Item", isPresented: $showingDeleteAlert) {

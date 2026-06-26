@@ -1,0 +1,3 @@
+## 2024-05-18 - Dynamic Accessibility Labels in SwiftUI
+**Learning:** Icon-only toggle buttons in SwiftUI (e.g., favorite buttons using a heart icon) need dynamic `.accessibilityLabel` values that correspond to their current state (e.g., `item.isFavorite ? "Remove from favorites" : "Add to favorites"`) to ensure screen reader users understand the action they are about to take, rather than just the current visual state.
+**Action:** When adding accessibility to toggle buttons in SwiftUI, always use ternary operators or similar logic to bind the `.accessibilityLabel` to the action the button will perform in its current state.
