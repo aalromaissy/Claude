@@ -1,0 +1,3 @@
+## 2026-06-29 - Dynamic Accessibility Labels for Toggle Buttons
+**Learning:** When adding accessibility labels to icon buttons that act as toggles (like a favorite button), static labels like 'Favorite' are insufficient because they don't reflect the current state or the result of the action. Users need to know whether tapping the button will add or remove the item.
+**Action:** Always use dynamic accessibility labels based on the current state (e.g., `.accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Add to favorites")`) for toggle buttons to provide clear, actionable feedback to VoiceOver users.
