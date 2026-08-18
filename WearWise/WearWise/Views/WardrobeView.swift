@@ -67,6 +67,7 @@ struct WardrobeView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .accessibilityLabel("Add item")
                 }
             }
             .sheet(isPresented: $showingAddItem) {
@@ -223,6 +224,7 @@ struct WardrobeItemCard: View {
                         .background(Color.black.opacity(0.3))
                         .clipShape(Circle())
                 }
+                .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Add to favorites")
                 .padding(8)
             }
 
@@ -344,6 +346,7 @@ struct ClothingItemDetailView: View {
                     } label: {
                         Image(systemName: "trash")
                     }
+                    .accessibilityLabel("Delete item")
                 }
             }
             .alert("Delete Item", isPresented: $showingDeleteAlert) {
