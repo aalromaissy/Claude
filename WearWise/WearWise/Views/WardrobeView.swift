@@ -66,6 +66,7 @@ struct WardrobeView: View {
                         showingAddItem = true
                     } label: {
                         Image(systemName: "plus")
+                            .accessibilityLabel("Add clothing item")
                     }
                 }
             }
@@ -222,6 +223,7 @@ struct WardrobeItemCard: View {
                         .padding(8)
                         .background(Color.black.opacity(0.3))
                         .clipShape(Circle())
+                        .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Add to favorites")
                 }
                 .padding(8)
             }
@@ -343,6 +345,7 @@ struct ClothingItemDetailView: View {
                         showingDeleteAlert = true
                     } label: {
                         Image(systemName: "trash")
+                            .accessibilityLabel("Delete clothing item")
                     }
                 }
             }
