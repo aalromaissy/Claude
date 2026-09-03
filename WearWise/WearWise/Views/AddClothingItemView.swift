@@ -165,6 +165,7 @@ struct ColorButton: View {
                     .foregroundColor(.primary)
             }
         }
+        .accessibilityLabel(name)
         .buttonStyle(.plain)
     }
 }
