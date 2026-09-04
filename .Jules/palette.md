@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing Accessibility Labels on Icon-Only Buttons in SwiftUI
+**Learning:** Found that numerous icon-only buttons in SwiftUI components lack `.accessibilityLabel(...)` modifiers, making them difficult to use for screen reader users. Specifically, `WardrobeView.swift` has a "plus" button for adding items and a "trash" button for deleting items, and `HomeView.swift` has a refresh button.
+**Action:** When adding icon-only buttons in SwiftUI (`Button { ... } label: { Image(systemName: "icon") }`), always append `.accessibilityLabel("Description")` to the label to ensure VoiceOver can properly announce the button's action.
