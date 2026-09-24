@@ -66,6 +66,7 @@ struct WardrobeView: View {
                         showingAddItem = true
                     } label: {
                         Image(systemName: "plus")
+                            .accessibilityLabel("Add clothing item")
                     }
                 }
             }
@@ -218,6 +219,7 @@ struct WardrobeItemCard: View {
                     onToggleFavorite()
                 } label: {
                     Image(systemName: item.isFavorite ? "heart.fill" : "heart")
+                        .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Add to favorites")
                         .foregroundColor(item.isFavorite ? .red : .white)
                         .padding(8)
                         .background(Color.black.opacity(0.3))
@@ -343,6 +345,7 @@ struct ClothingItemDetailView: View {
                         showingDeleteAlert = true
                     } label: {
                         Image(systemName: "trash")
+                            .accessibilityLabel("Delete item")
                     }
                 }
             }
