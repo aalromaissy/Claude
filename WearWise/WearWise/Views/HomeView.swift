@@ -75,6 +75,7 @@ struct HomeView: View {
                     } label: {
                         Image(systemName: "arrow.clockwise")
                     }
+                    .accessibilityLabel("Refresh Options")
                     .disabled(outfitViewModel.isLoading)
                 }
             }
