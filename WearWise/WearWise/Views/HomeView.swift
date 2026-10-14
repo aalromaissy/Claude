@@ -76,6 +76,7 @@ struct HomeView: View {
                         Image(systemName: "arrow.clockwise")
                     }
                     .disabled(outfitViewModel.isLoading)
+                    .accessibilityLabel("Refresh suggestions")
                 }
             }
             .sheet(item: $selectedSuggestion) { suggestion in
