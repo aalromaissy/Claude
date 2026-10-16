@@ -66,6 +66,7 @@ struct WardrobeView: View {
                         showingAddItem = true
                     } label: {
                         Image(systemName: "plus")
+                            .accessibilityLabel("Add Item")
                     }
                 }
             }
@@ -343,6 +344,7 @@ struct ClothingItemDetailView: View {
                         showingDeleteAlert = true
                     } label: {
                         Image(systemName: "trash")
+                            .accessibilityLabel("Delete Item")
                     }
                 }
             }
