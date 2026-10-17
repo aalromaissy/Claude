@@ -67,6 +67,7 @@ struct WardrobeView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .accessibilityLabel("Add clothing item")
                 }
             }
             .sheet(isPresented: $showingAddItem) {
@@ -344,6 +345,7 @@ struct ClothingItemDetailView: View {
                     } label: {
                         Image(systemName: "trash")
                     }
+                    .accessibilityLabel("Delete clothing item")
                 }
             }
             .alert("Delete Item", isPresented: $showingDeleteAlert) {
