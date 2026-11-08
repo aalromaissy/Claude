@@ -67,6 +67,7 @@ struct WardrobeView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .accessibilityLabel("Add Item")
                 }
             }
             .sheet(isPresented: $showingAddItem) {
@@ -223,6 +224,7 @@ struct WardrobeItemCard: View {
                         .background(Color.black.opacity(0.3))
                         .clipShape(Circle())
                 }
+                .accessibilityLabel(item.isFavorite ? "Remove from Favorites" : "Add to Favorites")
                 .padding(8)
             }
 
